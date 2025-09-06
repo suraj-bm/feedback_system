@@ -21,7 +21,7 @@ def Index():
 @app.route("/save_feedback",methods=["POST"])
 def save_feedback():
     data = request.get_json()
-    feedback_content = data.get("feedback")
+    feedback_content = data.get("content")
 
     if not feedback_content:
         return jsonify({"status": "error", "message": "No feedback provided"}), 400
