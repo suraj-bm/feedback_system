@@ -12,10 +12,11 @@
     <script>
         function startFeedback() {
             let utter= new SpeechSynthesisUtterance("How was todays java session?");
+            speechSynthesis.speak(utter);
             utter.onend=function(){
                 startListening();
             };
-            speechSynthesis.speak(utter);
+            
 
         }
 
